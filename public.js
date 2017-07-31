@@ -348,6 +348,13 @@ console.log(getOuter(5)); // 100
 //console.log(getFuns[1]()); //3
 //console.log(getFuns[2]()); //3
 
+function  remove(key: string) {
+        localStorage.removeItem(key);
+    }
+
+ function   clear() {
+        sessionStorage.clear();
+    }
 
 
 
