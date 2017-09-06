@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript" src="./jquery.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+<script type="text/javascript">
+    $(function() {
+        var result = [];
+        [2, 3, 2, 7, 9].forEach(function(item) {
+            if (result.indexOf(item) < 0) {
+                result.push(item)
+            }
+        });
+        console.log(result);
+
+        function maxData(arr) {
+            var max = arr[0] || 0;
+            for (var i = 0; i < arr.length; i++) {
+                max < arr[i] ? max = arr[i] : ""
+            }
+            return max;
+        }
+        console.log(maxData([5, 7, 3]));
+        var arr = [3, 5, 1, 0, 8];
+        var newarr = arr.concat(5, 4);
+        console.log(newarr);
+        var subArr = arr.slice(3, 4);
+        console.log(subArr)
+
+    });
+    (function() {
+        console.log("end")
+    })();
+</script>
+
+</html>
