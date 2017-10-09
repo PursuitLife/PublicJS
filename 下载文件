@@ -1,0 +1,11 @@
+function downLoad(downLoadUrl){
+	try{
+		var ifr = document.createElement('iframe');
+		ifr.src=downLoadUrl;
+		ifr.style.display = 'none';
+		document.body.appendChild(ifr);
+		//document.body.removeChild(ifr);
+	}catch{
+		alert("文件下载出错..");
+	}
+}
