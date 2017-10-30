@@ -10,4 +10,15 @@ function getStyle(el) {
     }
 }
 getStyle(el);
+//获取元素制定样式
+    function getStyle(obj, attr) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[attr];
+        } else {
+            return getComputedStyle(obj, false)[attr];
+        }
+    }
+var obj = document.querySelector(".app");
+    getStyle(obj, "width");
+
 alert(el.offsetTop) // 获取元素距离 顶部距离
