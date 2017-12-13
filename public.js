@@ -355,7 +355,13 @@ function  remove(key: string) {
  function   clear() {
         sessionStorage.clear();
     }
-
+getStyle(ele,attr){  
+     if(window.getComputedStyle){  
+        return window.getComputedStyle(ele,false)[attr];  
+     }else{  
+        return ele.currentStyle[attr];  
+     }  
+   },
 
 
 
