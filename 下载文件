@@ -1,0 +1,12 @@
+export function downLoad(downLoadUrl) { //文件下载
+    try {
+        var ifr = document.createElement('a');
+        ifr.href = loadUrl + downLoadUrl;
+        ifr.style.display = 'none';
+        document.body.appendChild(ifr);
+        ifr.setAttribute("download", "");
+        ifr.click();
+    } catch (er) {
+        return "error";
+    }
+}

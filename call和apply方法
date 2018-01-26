@@ -1,0 +1,10 @@
+    function myAddEvent(obj, sEv, fn) {
+        if (obj.attachEvent) { //IE
+            obj.attachEvent("on" + sEv, function() {
+                fn.call(obj); //call(obj,2,3,4);call方法第一个参数指 this ,后续参数依次传入
+                // apply(obj,[2,3,4]);apply方法方法第一个参数指 this ,后续参数数组传入
+            })
+        } else {
+            obj.addEventListener(sEv, fn, false)
+        }
+    }
