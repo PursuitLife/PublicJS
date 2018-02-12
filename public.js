@@ -362,8 +362,18 @@ getStyle(ele,attr){
         return ele.currentStyle[attr];  
      }  
    },
-
-
+// js中实现注销 scroll 解决方法
+       let self=this;
+        window.onscroll=function(){//页面滚动时的操作
+          self.scrollView()
+        }
+        scrollView(){
+            // dosomething
+        }
+// 注销 scroll 方法
+        function removeScroll(){
+            window.onscroll=null;
+        }
 
 
 
