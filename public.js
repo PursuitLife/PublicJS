@@ -362,6 +362,10 @@ getStyle(ele,attr){
         return ele.currentStyle[attr];  
      }  
    },
+       
+       
+ // js 中不能直接用 event.preventDefault() 阻止或者注销的方法 ，可将其执行的方法设为 null，eg：  window.onscroll=null
+  // load、unload 、abort 、 error 、 select 、 resize 、 scroll
 // js中实现注销 scroll 解决方法
        let self=this;
         window.onscroll=function(){//页面滚动时的操作
